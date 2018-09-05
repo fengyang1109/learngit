@@ -1,0 +1,1 @@
+quick AND simple
