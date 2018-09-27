@@ -37,6 +37,8 @@ def wri():
 		os.remove(path1)
 		os.rename(path, path1)
 		print('写入完成')
+		for x, c in html_in.items():
+			print(c[0], c[1])
 	except TypeError:
 		print(html_in)
 

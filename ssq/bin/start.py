@@ -10,6 +10,7 @@ sys.path.append(basedir)
 
 from model import contrast
 from model import write
+# from model import ipt
 write.wri()
 contrast.con()
 
