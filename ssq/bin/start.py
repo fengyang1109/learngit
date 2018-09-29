@@ -8,7 +8,7 @@ import sys
 basedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(basedir)
 
-from model import contrast
+from model import select
 from model import write
 from model import oddandeven
 from model import ranm
@@ -17,7 +17,7 @@ tag = 0
 while tag == 0:
 	userip = input('1: 自选\t2: 机选\t3: 退出\n#>: ').strip()
 	if userip.isdigit() and userip == '1':
-		contrast.con()
+		select.ball_select()
 	elif userip.isdigit() and userip == '2':
 		while tag == 0:
 			urip = input('1: 随机选择\t2: 模式选择\n#>: ').strip()
