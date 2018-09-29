@@ -11,7 +11,7 @@ sys.path.append(basedir)
 from model import contrast
 from model import write
 from model import oddandeven
-from model import sum
+from model import ranm
 write.wri()
 tag = 0
 while tag == 0:
@@ -22,7 +22,7 @@ while tag == 0:
 		while tag == 0:
 			urip = input('1: 随机选择\t2: 模式选择\n#>: ').strip()
 			if urip.isdigit() and urip == '1':
-				sum.sum_of_values()
+				ranm.sum_of_values()
 				tag = 1
 			elif urip.isdigit() and urip == '2':
 				oddandeven.oad()

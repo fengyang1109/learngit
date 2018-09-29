@@ -13,8 +13,8 @@ def iput():
 
 		userodd = input('请输入奇值: ').strip()
 		usereven = input('请输入偶值: ').strip()
-		oe = re.match(r"^[0-6]\d", userodd)
-		en = re.match(r"^[0-6]\d", usereven)
+		oe = re.match(r"^[0-6]{1}", userodd)
+		en = re.match(r"^[0-6]{1}", usereven)
 		a = int(usereven) + int(userodd)
 		if oe and en and a == 6:
 			ar['oddnum'] = userodd

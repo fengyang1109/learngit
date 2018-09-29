@@ -40,9 +40,9 @@ def oad():
 	redlist = oddlist + evenlist
 	redlist.sort()
 	redlist.append(numbull)
-	print(redlist)
+	# print(redlist)
 	return redlist
 
 
 if __name__ == '__main__':
-	oad()
+	print(oad())
