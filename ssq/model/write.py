@@ -39,8 +39,8 @@ def wri():
 		print('写入完成')
 		for x, c in html_in.items():
 			print(c[0], c[1])
-	except TypeError:
-		print(html_in)
+	except (TypeError, PermissionError) as e:
+		print(e.message)
 
 
 if __name__ == '__main__':

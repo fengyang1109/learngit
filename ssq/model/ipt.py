@@ -6,7 +6,7 @@
 """
 import re
 
-def iput():
+def iputoddeven():
 	ar = {}
 	tag = True
 	while tag:
@@ -26,4 +26,4 @@ def iput():
 
 
 if __name__ == '__main__':
-	iput()
+	iputoddeven()
