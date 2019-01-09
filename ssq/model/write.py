@@ -17,8 +17,8 @@ def wri():
 	from model import reptilian
 	import xlwt
 
-	path = r'%s\dbfile\双色球test.xls' % basedir  # 新建文件名
-	path1 = r'%s\dbfile\双色球.xls' % basedir  # 原文件名
+	path = r'%s%sdbfile%s双色球test.xls' % (basedir,os.sep, os.sep)  # 新建文件名
+	path1 = r'%s%sdbfile%s双色球.xls' % (basedir, os.sep, os.sep)  # 原文件名
 	try:
 		html_in = reptilian.rep()
 		execl_in = read.read_execl()
