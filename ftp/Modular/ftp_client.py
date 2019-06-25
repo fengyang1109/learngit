@@ -4,6 +4,12 @@
 import socket
 import struct
 import json
+import os
+import sys
+
+basedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(basedir)
+from Modular import processing
 
 
 class client:
@@ -16,11 +22,20 @@ class client:
     def starting(self):
         self.username = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.username.connect(('127.0.0.1', 8888))
-        print('client-starting>>>>>>>>>>')
+        print('client-starting'.center(30, '#'))
         while True:
 
             cmd = input('>>: ').strip()
+            tem = cmd.split(' ')
             if not cmd: continue
+            if tem[0] == 'put' or tem[0] == 'get':
+
+                if cmd[1].strip():
+                    processing.processing_file(tem[1], self.home_catalogue)
+
+                else:
+                    continue
+                continue
             self.username.send(cmd.encode('utf-8'))
             # 首先接收固定长度的报头长度数据
             head_struct = self.username.recv(4)

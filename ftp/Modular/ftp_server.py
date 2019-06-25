@@ -9,15 +9,15 @@ import struct
 
 
 def server():
-    print('server-starting>>>>>>>')
+    print('server-starting'.center(30, '#'))
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind(('127.0.0.1', 8888))
     s.listen(5)
 
     while True:
         conn, addr = s.accept()
-        print(conn)
-        print(addr)
+        # print(conn)
+        # print(addr)
         while True:
             try:
                 cmd = conn.recv(1024)

@@ -25,8 +25,7 @@ def auth():
                         'user_name': user_name,
                         'user_pwd': user_pwd,
                         'user_home': cg.get('Home_catalogue', user_name),
-                        'user_space': cg.get('data_space', user_name),\
-                        'user_port': cg.get('port', user_name)}
+                        'user_space': cg.get('data_space', user_name)}
             return user_dic
         else:
             print('用户名或密码错误')
